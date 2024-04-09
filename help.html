@@ -22,6 +22,9 @@
 
   <link rel="preconnect" href="https://images.gleamgreen.com" />
   <link rel="preconnect" href="https://media.gleamgreen.com" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
   <meta property="og:title" content="Lab Grown Diamond Jewelry | Lab Created Diamonds | Gleam Green Jewels" />
   <meta property="og:image" content="https://images.gleamgreen.com/images/logo.svg"
     name="Lab Grown Diamond Jewelry | Lab Created Diamonds | Gleam Green Jewels" />
@@ -1784,32 +1787,144 @@
     });
 </script>
 
-<div class="faq">
-    <div class="faq-item">
-        <div class="question">Q: What is Lorem Ipsum?</div>
-        <div class="answer">A: Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+    <div class="accordian-main">
+      <button class="accordion" onclick="handleRotate('button1')"><p style="font-size: 16px; font-weight: 600; margin-right: 35px;">Is there a minimum spend for custom orders?</p>
+      <div><i class="plus-minus fas fa-plus" ></i></div></button>
+      <div class="panel">
+        <p>Our custom jewelry starts at $2,000 and is priced considering a blend of materials, labor, 
+          and the centerpiece stone. While we waive design fees, we require the centerpiece stone to 
+          be acquired through us. Unfortunately, we're unable to accommodate heirlooms or stones from 
+          other online retailers at this time. While we design various jewelry types, our most competitive 
+          pricing is for diamond and gemstone-forward pieces.
+        </p>
+      </div>
+
+      <button class="accordion" onclick="handleRotate('button2')"><p style="font-size: 16px; font-weight: 600; margin-right: 35px;">How long does it take to make a ring?</p>
+        <div><i class="plus-minus fas fa-plus"></i></div></button>
+      <div class="panel">
+        <p>Quality takes time! Our collection styles usually ship around three weeks after 
+          ordering, with regular updates along the way. You'll also receive a final address 
+          confirmation email before shipping.F
+
+          or custom designs or intricate pieces, we recommend allowing 5-6 weeks for design 
+          and creation. Remember, the wait is worth it for something truly special!
+          </p>
+      </div>
+
+      <button class="accordion" onclick="handleRotate('button3')"> <p style="font-size: 16px; font-weight: 600; margin-right: 35px;">How does the custom design process work?</p>
+        <div><i class="plus-minus fas fa-plus"></i></div></button>
+      <div class="panel">
+        <p><span style="font-weight: 600;">ready to start? When you are ready:</span> Book a consultation to discuss your ring design. We recommend beginning this process about five weeks before your desired delivery date.
+
+          <p><span style="font-weight: 600;">Collaborate via email:</span> Work closely with your designer using reference photos and sketches.</p>
+          
+          <p><span style="font-weight: 600;">Easy stone selection:</span> Your designer will offer a selection of stones based on your preferences and budget, including diamonds and gemstones.</p>
+          
+          <p><span style="font-weight: 600;">Order placement and 3D model creation:</span> After placing your order, we'll create a 3D model for your approval.</p>
+          
+         <p> <span style="font-weight: 600;">Ring production:</span> Once approved, we'll craft your ring with meticulous attention to detail, taking about three weeks.
+          </p>
+      </div>
+
+      <button class="accordion" onclick="handleRotate('button4')"> 
+        <p  style="font-size: 16px; font-weight: 600; margin-right: 35px;">What if I change my mind after receiving my 3D ring mock-up and want to make changes?</p>
+
+        <div><i class="plus-minus fas fa-plus"></i></div></button>
+      <div class="panel">
+        <p>
+          Each Gleam Green ring comes with two rounds of free minor revisions, 
+          allowing adjustments such as band thickness, setting height, and side 
+          stone size, without a complete CAD model overhaul.
+
+          For a complete change of mind requiring a new CAD model, 
+          subsequent models cost $350. This includes the new ring design, 
+          a second fit sample, and two more rounds of revisions. Please note, 
+          this fee is nonrefundable and cannot be applied toward the final ring purchase.
+           </p>
+      </div>
     </div>
-    <div class="faq-item">
-        <div class="question">Q: Why do we use it?</div>
-        <div class="answer">A: It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</div>
-    </div>
-    <div class="faq-item">
-        <div class="question">Q: Where does it come from?</div>
-        <div class="answer">A: Contrary to popular belief, Lorem Ipsum is not simply random text.</div>
-    </div>
-</div>
+
+<style>
+  .accordian-main{
+    margin: 50px 150px;
+  }
+
+  .accordion {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F9E8DF;
+    color: #333;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background-color 0.4s;
+    position: relative;
+  }
+
+
+  .panel {
+    padding: 20px;
+    display: none;
+    background-color: #F9E8DF;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+
+  }
+
+  .panel p{
+    font-size: 14px;
+  }
+
+  .plus-minus {
+    position: absolute;
+    top: 35%;
+    right: 18px;
+    transition: transform 0.4s;
+  }
+
+ 
+
+  @media screen and (max-width: 767px) {
+    .accordian-main{
+      margin: 50px 30px;
+    }
+}
+ 
+</style>
 
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const questions = document.querySelectorAll('.question');
-        questions.forEach(question => {
-            question.addEventListener('click', function() {
-                this.nextElementSibling.classList.toggle('show');
-            });
-        });
-    });
-</script>
+
+  const handleRotate = (button) => {
+      // Update the rotation angle for the specified button by adding 45 degrees
+      setRotations((prevRotations) => ({
+        ...prevRotations,
+        [button]: prevRotations[button] + 45,
+      }));
+    };
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+  
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+  
+        var icon = this.querySelector('.plus-minus');
+        icon.classList.toggle('fa-plus');
+        icon.classList.toggle('fa-times');
+      });
+    }
+  </script>
+  
 
 
 

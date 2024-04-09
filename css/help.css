@@ -75,7 +75,7 @@ cursor: pointer;
 display: none;
 margin-top: 10px;
 opacity: 0;
-transition: opacity 0.3s ease-in-out;
+transition: opacity 0.3s ease-in-out;   
 }
 .show {
 display: block;
