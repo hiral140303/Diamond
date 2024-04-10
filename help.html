@@ -1798,6 +1798,7 @@
           pricing is for diamond and gemstone-forward pieces.
         </p>
       </div>
+      <hr>
 
       <button class="accordion" onclick="handleRotate('button2')"><p style="font-size: 16px; font-weight: 600; margin-right: 35px;">How long does it take to make a ring?</p>
         <div><i class="plus-minus fas fa-plus"></i></div></button>
@@ -1810,6 +1811,7 @@
           and creation. Remember, the wait is worth it for something truly special!
           </p>
       </div>
+      <hr>
 
       <button class="accordion" onclick="handleRotate('button3')"> <p style="font-size: 16px; font-weight: 600; margin-right: 35px;">How does the custom design process work?</p>
         <div><i class="plus-minus fas fa-plus"></i></div></button>
@@ -1825,6 +1827,7 @@
          <p> <span style="font-weight: 600;">Ring production:</span> Once approved, we'll craft your ring with meticulous attention to detail, taking about three weeks.
           </p>
       </div>
+      <hr>
 
       <button class="accordion" onclick="handleRotate('button4')"> 
         <p  style="font-size: 16px; font-weight: 600; margin-right: 35px;">What if I change my mind after receiving my 3D ring mock-up and want to make changes?</p>
@@ -1842,6 +1845,44 @@
           this fee is nonrefundable and cannot be applied toward the final ring purchase.
            </p>
       </div>
+      <hr>
+
+      <button class="accordion" onclick="handleRotate('button4')"> 
+        <p style="font-size: 16px; font-weight: 600; margin-right: 35px;"> I want to compare two custom designs — can I get CAD mockups of both?</p>
+
+        <div><i class="plus-minus fas fa-plus"></i></div></button>
+      <div class="panel">
+        <p>
+          If you choose to purchase a second CAD mockup for $350, please note that the deposit is non-refundable, and only one CAD model can be applied toward the final purchase.
+          Feeling unsure? We recommend discussing your concerns with your designer and going with the design you feel most confident about—chances are, you'll love it.If you're still not satisfied, don't worry. Two rounds of minor revisions are included free of charge. 
+          And if you still aren't happy, you can always decide to purchase the second model at a later time.
+        </p>
+      </div>
+      <hr>
+     
+      <button class="accordion" onclick="handleRotate('button4')"> 
+        <p style="font-size: 16px; font-weight: 600; margin-right: 35px;">I paid for a CAD mockup but no longer want to order my ring, is it refundable?
+        </p>
+
+        <div><i class="plus-minus fas fa-plus"></i></div></button>
+      <div class="panel">
+        <p>
+          Unfortunately, CAD deposits are non-refundable and can only be used as credit for the specific ring they were designed for.
+        </p>
+      </div>
+      <hr>
+
+      <button class="accordion" onclick="handleRotate('button4')"> 
+        <p style="font-size: 16px; font-weight: 600; margin-right: 35px;">How long is my custom price quote valid?
+        </p>
+
+        <div><i class="plus-minus fas fa-plus"></i></div></button>
+      <div class="panel">
+        <p>
+          Quotes for custom settings and bands (excluding the center stone) remain valid for two weeks and may be subject to change depending on material and labor costs.
+        </p>
+      </div>
+      <hr>
     </div>
 
 <style>
@@ -1855,7 +1896,6 @@
     background-color: #F9E8DF;
     color: #333;
     cursor: pointer;
-    padding: 18px;
     width: 100%;
     text-align: left;
     border: none;
@@ -1872,6 +1912,7 @@
     overflow: hidden;
     transition: max-height 0.4s ease-out;
 
+
   }
 
   .panel p{
@@ -1883,6 +1924,11 @@
     top: 35%;
     right: 18px;
     transition: transform 0.4s;
+
+  }
+
+  .accordion.active .plus-minus {
+    transform: rotate(45deg);
   }
 
  
